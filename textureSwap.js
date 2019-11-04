@@ -15,6 +15,29 @@ const app = new PIXI.Application({
     height: window.innerHeight 
 });
 
+
+var hideLogo = size.height < HIDE_LOGO_LIMIT;
+var split = hideLogo ? 3 : 4;
+var componentSize = Math.floor(size.height/split);
+
+this.logo.resize(new PIXI.Rectangle(0,0,size.width, hideLogo? 0 : componentSize));
+this.gameView.resize(new PIXI.Rectangle(0,componentSize * (hideLogo?0:1), size.width, componentSize));
+this.questionArea.resize(new PIXI.Rectangle(0,componentSize * (hideLogo?1:2), size.width, componentSize));
+this.inputArea.resize(new PIXI.Rectangle(0,componentSize * (hideLogo?2:3), size.width, componentSize));
+
+//And in each component the resize method would be something like this
+function resize﻿(size){
+  this.bg.width = size.width;
+  this.bg.height = size.height;
+  this.x = size.x;
+  this.y = size.y;
+  this.text.x = 20;
+  this.text.y = 20;
+  this.text.style.wordWrapWidth = size.width-40;
+}
+
+
+
 //Scale to fit and center
 // var size = new PIXI.Rectangle(0,0,window.innerWidth, window.innerHeight);
 // var s = app.width/this.gameArea.width;
