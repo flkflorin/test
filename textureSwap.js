@@ -16,7 +16,7 @@ const app = new PIXI.Application({
     height: window.innerHeight 
 });
 
-
+PIXI.loader.add('');
 
 //Scale to fit and center
 // var size = new PIXI.Rectangle(0,0,window.innerWidth, window.innerHeight);
@@ -60,6 +60,7 @@ dude.y = app.screen.height / 2;
  dude.on('mousemove', onDragMove)
  dude .on('touchmove', onDragMove);
 
+ app.renderer.autoResize = true;
  app.stage.addChild(dude);
 
 
