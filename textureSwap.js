@@ -22,7 +22,7 @@ const app = new PIXI.Application({
 // this.gameArea.scale.x = this.gameArea.scale.y = s;
 // this.gameArea.x = Math.round((app.width-this.gameArea.width)/2);
 
-app.renderer.resize(window.innerWidth, window.innerHeight);
+//app.renderer.resize(window.innerWidth, window.innerHeight);
 
 let tapCounter = 0;
 
