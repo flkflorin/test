@@ -40,7 +40,7 @@ const dude = new PIXI.Sprite(texture);
 
 dude.interactive = true;
 dude.buttonMode = true;
-dude.scale.set(1);
+dude.scale.set(320);
 dude.anchor.set(0.5);
 dude.x = app.screen.width / 2;
 dude.y = app.screen.height / 2;
@@ -60,7 +60,7 @@ dude.y = app.screen.height / 2;
  dude.on('mousemove', onDragMove)
  dude .on('touchmove', onDragMove);
 
- app.renderer.autoResize = true;
+ app.renderer.autoResize = false;
  app.stage.addChild(dude);
 
 
