@@ -11,7 +11,7 @@ window.addEventListener('resize', function() {
 
 const app = new PIXI.Application({
     resizeTo: window,
-    transparent: true,
+    transparent: false,
     width: window.innerWidth,
     height: window.innerHeight 
 });
