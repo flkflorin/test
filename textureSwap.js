@@ -15,7 +15,14 @@ const app = new PIXI.Application({
     height: window.innerHeight 
 });
 
-//app.renderer.resize(window.innerWidth, window.innerHeight);
+//Scale to fit and center
+// var size = new PIXI.Rectangle(0,0,window.innerWidth, window.innerHeight);
+// var s = app.width/this.gameArea.width;
+// if(s > app.height/this.gameArea.height) s = app.height/this.gameArea.height;
+// this.gameArea.scale.x = this.gameArea.scale.y = s;
+// this.gameArea.x = Math.round((app.width-this.gameArea.width)/2);
+
+app.renderer.resize(window.innerWidth, window.innerHeight);
 
 let tapCounter = 0;
 
