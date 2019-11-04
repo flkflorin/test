@@ -18,7 +18,6 @@ const app = new PIXI.Application({
 
 
 
-
 //Scale to fit and center
 // var size = new PIXI.Rectangle(0,0,window.innerWidth, window.innerHeight);
 // var s = app.width/this.gameArea.width;
@@ -62,6 +61,7 @@ dude.y = app.screen.height / 2;
  dude .on('touchmove', onDragMove);
 
  app.stage.addChild(dude);
+
 
  app.ticker.add(() => {
     // just for fun, let's rotate mr rabbit a little
