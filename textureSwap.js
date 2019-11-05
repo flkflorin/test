@@ -37,7 +37,7 @@ const texture = PIXI.Texture.from('images/bunny1.png');
 
 // create a second texture
 const secondTexture = PIXI.Texture.from('images/bunny2.png');
-texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
+
 
 // create a new Sprite using the texture
 const dude = new PIXI.Sprite(texture);
@@ -101,10 +101,8 @@ function changeTexture() {
     switchTexture = !switchTexture;
     if (switchTexture) {
         dude.texture = secondTexture;
-        dude.texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
     } else {
         dude.texture = texture;
-        dude.texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
     }
 }
 
