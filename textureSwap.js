@@ -30,11 +30,14 @@ const app = new PIXI.Application({
 
 let tapCounter = 0;
 
+
+
 // create a texture from an image path
 const texture = PIXI.Texture.from('images/bunny1.png');
 
 // create a second texture
 const secondTexture = PIXI.Texture.from('images/bunny2.png');
+texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
 
 // create a new Sprite using the texture
 const dude = new PIXI.Sprite(texture);
