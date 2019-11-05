@@ -10,34 +10,24 @@ window.addEventListener('resize', function() {
 })
 
 const app = new PIXI.Application({
-    resizeTo: window,
-    transparent: false,
+    transparent: true,
     width: window.innerWidth,
     height: window.innerHeight 
 });
 
-// graphics.alpha = 0;
-// PIXI.loader.add('');
-
-//Scale to fit and center
-// var size = new PIXI.Rectangle(0,0,window.innerWidth, window.innerHeight);
-// var s = app.width/this.gameArea.width;
-// if(s > app.height/this.gameArea.height) s = app.height/this.gameArea.height;
-// this.gameArea.scale.x = this.gameArea.scale.y = s;
-// this.gameArea.x = Math.round((app.width-this.gameArea.width)/2);
+var renderer = PIXI.autoDetectRenderer( 512, 384, {
+    view: document.getElementById("tedy-bear")
+});
 
 //app.renderer.resize(window.innerWidth, window.innerHeight);
 
 let tapCounter = 0;
-
-
 
 // create a texture from an image path
 const texture = PIXI.Texture.from('images/bunny1.png');
 
 // create a second texture
 const secondTexture = PIXI.Texture.from('images/bunny2.png');
-
 
 // create a new Sprite using the texture
 const dude = new PIXI.Sprite(texture);
@@ -64,17 +54,13 @@ dude.y = app.screen.height / 2;
  dude.on('mousemove', onDragMove)
  dude .on('touchmove', onDragMove);
 
-//  app.renderer.autoResize = false;
  app.stage.addChild(dude);
-
 
  app.ticker.add(() => {
     // just for fun, let's rotate mr rabbit a little
     dude.rotation += 0.1;
 });
 
-
-PIXI.SCALE_MODES.DEFAULT = PIXI.SCALE_MODES.NEAREST;
 
 // ----------------- helper functions --------------------------------
 
