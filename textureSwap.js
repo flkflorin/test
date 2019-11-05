@@ -16,7 +16,8 @@ const app = new PIXI.Application({
     height: window.innerHeight 
 });
 
-PIXI.loader.add('');
+graphics.alpha = 0;
+// PIXI.loader.add('');
 
 //Scale to fit and center
 // var size = new PIXI.Rectangle(0,0,window.innerWidth, window.innerHeight);
@@ -40,7 +41,7 @@ const dude = new PIXI.Sprite(texture);
 
 dude.interactive = true;
 dude.buttonMode = true;
-dude.scale.set(320);
+dude.scale.set(1);
 dude.anchor.set(0.5);
 dude.x = app.screen.width / 2;
 dude.y = app.screen.height / 2;
