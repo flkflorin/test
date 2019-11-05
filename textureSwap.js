@@ -16,7 +16,7 @@ const app = new PIXI.Application({
     height: window.innerHeight 
 });
 
-graphics.alpha = 0;
+// graphics.alpha = 0;
 // PIXI.loader.add('');
 
 //Scale to fit and center
