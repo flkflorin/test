@@ -101,8 +101,10 @@ function changeTexture() {
     switchTexture = !switchTexture;
     if (switchTexture) {
         dude.texture = secondTexture;
+        dude.texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
     } else {
         dude.texture = texture;
+        dude.texture.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
     }
 }
 
