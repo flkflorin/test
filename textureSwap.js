@@ -61,7 +61,7 @@ dude.y = app.screen.height / 2;
  dude.on('mousemove', onDragMove)
  dude .on('touchmove', onDragMove);
 
- app.renderer.autoResize = false;
+//  app.renderer.autoResize = false;
  app.stage.addChild(dude);
 
 
@@ -70,6 +70,8 @@ dude.y = app.screen.height / 2;
     dude.rotation += 0.1;
 });
 
+
+PIXI.SCALE_MODES.DEFAULT = PIXI.SCALE_MODES.NEAREST;
 
 // ----------------- helper functions --------------------------------
 
